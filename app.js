@@ -12,6 +12,10 @@ import { jsonParser } from "./helper/jsonParser.js";
     let result = await generateContent(processedImagePath, false);
     let jsonData = jsonParser(result);
     await postprocessing(jsonData);
+    console.log("✅ All processing steps completed successfully");
+    console.log("📊 JSON data processed:", jsonData);
+    console.log("🎉 Final results have been saved");
+
 
   } catch (error) {
     console.error("Error processing:", error);
@@ -19,3 +23,4 @@ import { jsonParser } from "./helper/jsonParser.js";
 
   console.timeEnd("Processing completed");
 })();
+ 

@@ -1,5 +1,5 @@
 export function prompt(includeDetails) {
-    return `
+  return `
 The input is an image of a hotel menu card. Your task is to:
 
 Extract text from the image and then identify and group all food items strictly under the categories explicitly mentioned in the menu.
@@ -13,7 +13,7 @@ Provide a detailed and engaging description (3-5 sentences) for each food item i
 
 Additional details:
 
-If 'includeDetails' is true, add 'ingredients', 'nutrition', and 'spiceLevel' for each item. For items served cold, ensure 'spiceLevel' is set to 'null'.
+If 'includeDetails' is true,include 'nutrition', and 'spiceLevel' for each item.
 If 'includeDetails' is false, exclude the 'ingredients', 'nutrition', and 'spiceLevel' fields.
 
 Structure the output strictly as:
@@ -25,13 +25,12 @@ Structure the output strictly as:
       "category": "category_name",
       "description": "Detailed and engaging description",
       "price": "price",
-      "diet": "veg/Non-veg"
-      "ingredients": ["ingredient1", "ingredient2"],
+      "diet": "veg/Non-veg",
       "nutrition": {
-        "fats": "value",
-        "proteins": "value",
-        "carbs": "value",
-        "calories": "value"
+        "fats": 0.5gm,
+        "proteins": 10gm,
+        "carbs": 15gm,
+        "calories": "100c"
       },
       "spiceLevel": spiceLevel_value
     }
